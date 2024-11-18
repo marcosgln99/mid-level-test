@@ -43,10 +43,10 @@ You have two Linux machines running **Ubuntu 20.04** or **22.04**:
 
 - **First machine**:
   - Install:
-    - **Apache**
-    - **PHP 8.2**
-    - **Node.js 20.16**
-    - **MySQL**
+    - **Apache = 2.4 / Nginx = latest**
+    - **PHP = 8.2**
+    - **Node.js = 20.16**
+    - **MySQL > 8.0**
   - Create a simple PHP page that displays:  
     `"Hi, I am the host: <HOSTNAME>"`, where `<HOSTNAME>` is dynamically retrieved by PHP.
 
