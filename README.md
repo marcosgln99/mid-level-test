@@ -14,23 +14,24 @@ Fork this repository and make the necessary changes in your repository. As a fin
 
 2. **You are free to use any technologies you deem fit to solve the problem.**  
    However, the technologies requested in the job application will be valued more.
+   review job position requerirements in files inside this repository.
 
-3. **The test must be completed within one week (7 days).**  
+4. **The test must be completed within one week (7 days).**  
    This period starts from the moment the technical test is communicated and accepted.
 
-4. **Minimum security and usability criteria must be met.**  
+5. **Minimum security and usability criteria must be met.**  
    Hardcoded values, passwords, or similar items in the code will automatically invalidate the test.
 
-5. **If the test requires passwords or SSH keys.**  
+6. **If the test requires passwords or SSH keys.**  
    Indicate them as `<PASSWORD>` and `<SSH KEY>` in the code and send them separately to the reviewer.
 
-6. **The evaluator may ask questions about the test in a live, face-to-face interview.**
+7. **The evaluator may ask questions about the test in a live, face-to-face interview.**
 
-7. **Minimum and maximum scope considerations:**  
+8. **Minimum and maximum scope considerations:**  
    - Meeting the minimum requirements will score up to **7/10**.  
    - Meeting the maximum scope can score up to **10/10**.
 
-8. **Evaluation is based on completeness.**  
+9. **Evaluation is based on completeness.**  
    It is better to achieve 100% of the minimum scope than 70% of the maximum scope.
 
 ---
