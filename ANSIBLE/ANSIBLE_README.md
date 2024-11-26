@@ -44,5 +44,5 @@ Once Ansible has been configured properly, it can be launched. For that purpose,
 
 ```
 $> cd <Ansible root path>
-$> ansible-playbook <playbook to be executed>
+$> ansible-playbook -u kyc_ops --private-key <path/to/private-key.pem> <playbook to be executed>
 ```
