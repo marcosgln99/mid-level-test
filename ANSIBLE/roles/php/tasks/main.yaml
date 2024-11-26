@@ -1,15 +1,21 @@
 # VM 1 host configuration and installation
 ---
 
-- name: Install "Apache"
-  apt:
-    name: apache2
+- name: Add "Ondřej PHP PPA" Repository
+  apt_repository:
+    repo: ppa:ondrej/php
     state: present
     update_cache: yes
 
-- name: Install "PHP"
+- name: Install "Apache" 2.4
   apt:
-    name: php8.2
+    name: "apache2=2.4.*"
+    state: present
+    update_cache: yes
+
+- name: Install "PHP" 8.2
+  apt:
+    name: "php8.2=8.2.*"
     state: present
 
 - name: Install "node.js"
