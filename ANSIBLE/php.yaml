@@ -1,0 +1,7 @@
+---
+
+- hosts: kyc-php
+  gather_facts: True
+  become: True
+  roles:
+     - php

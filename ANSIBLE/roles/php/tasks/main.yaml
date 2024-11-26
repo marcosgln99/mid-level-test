@@ -1,0 +1,56 @@
+# VM 1 host configuration and installation
+---
+
+- name: Install "Apache"
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+
+- name: Install "PHP"
+  apt:
+    name: php8.2
+    state: present
+
+- name: Install "node.js"
+  apt:
+    name: apache2
+    state: present
+
+- name: Install "MySQL"
+  apt:
+    name: mysql-server
+    state: present
+
+- name: Create PHP test page
+  copy:
+    content: "Hi, I am the host: {{ ansible_hostname }}"
+    dest: /var/www/html/index.php
+
+- name: Restart apache2 service to apply changes
+  systemd:
+    name: apache2
+    state: restarted
+    enabled: True
+
+- name: Copy Node Exporter to /tmp
+  copy:
+   src: "{{ role_path }}/files/node_exporter-1.6.0.linux-amd64.tar"
+   dest: /tmp
+
+- name: Extract Node Exporter
+  unarchive:
+    src: /tmp/node_exporter-1.6.0.linux-amd64.tar
+    dest: /usr/local/bin/
+    remote_src: yes
+
+- name: Copy Node Exporter custom service
+  copy:
+   src: "{{ role_path }}/files/node_exporter.service"
+   dest: /etc/systemd/system/
+
+- name: Start Node Exporter service
+  systemd:
+    name: node_exporter
+    state: started
+    enabled: yes

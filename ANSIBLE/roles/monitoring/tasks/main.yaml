@@ -1,0 +1,22 @@
+# VM 1 host configuration and installation
+---
+
+- name: Install "Grafana"
+  apt:
+    name: grafana
+    state: present
+    update_cache: yes
+
+- name: Install "Prometheus"
+  apt:
+    name: prometheus
+    state: present
+
+- name: Start Grafana and Prometheus services
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: True
+  with_items: 
+    - grafana-server
+    - prometheus
