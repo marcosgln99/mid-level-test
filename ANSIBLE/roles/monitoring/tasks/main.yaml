@@ -21,9 +21,7 @@
   ignore_errors: yes
 
 - name: Add Grafana repository
-    apt_repository:
-      repo: "deb https://packages.grafana.com/oss/deb stable main"
-      state: present
+    shell: 'echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list'
 
 - name: Install Grafana
     apt:
