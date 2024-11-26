@@ -60,3 +60,14 @@
     name: node_exporter
     state: started
     enabled: yes
+
+- name: Install "Prometheus"
+  apt:
+    name: prometheus
+    state: present
+
+- name: Start Prometheus service
+  systemd:
+    name: prometheus
+    state: started
+    enabled: True
