@@ -27,10 +27,10 @@
     filename: grafana
 
 - name: Install Grafana
-    apt:
-      name: grafana
-      state: present
-      update_cache: yes
+  apt:
+    name: grafana
+    state: present
+    update_cache: yes
 
 - name: Install "Prometheus"
   apt:
