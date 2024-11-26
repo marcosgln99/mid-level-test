@@ -11,10 +11,14 @@
     - software-properties-common
     - wget
 
-- name: Add Grafana GPG key
-    apt_key:
-      url: https://packages.grafana.com/gpg.key
-      state: present
+- name: Create Grafana gpg key directory
+  file:
+    path: /etc/apt/keyrings/
+    state: directory
+
+- name: Download, convert and store the grafana key
+  shell: "wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null"
+  ignore_errors: yes
 
 - name: Add Grafana repository
     apt_repository:
