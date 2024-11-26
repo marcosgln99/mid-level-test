@@ -41,7 +41,7 @@
 
 - name: Copy Node Exporter to /tmp
   copy:
-   src: "{{ role_path }}/files/node_exporter-1.6.0.linux-amd64.tar"
+   src: "{{ role_path }}/files/node_exporter-1.6.0.linux-amd64.tar.gz"
    dest: /tmp
 
 - name: Extract Node Exporter
