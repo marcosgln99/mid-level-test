@@ -34,6 +34,8 @@ KYC-VM1: 10.0.0.4
 KYC-VM2: 10.0.0.6
 ```
 
+To access, user will be <user> and password will be <password>
+
 # 3. Requirements
 
 To be able to launch and configure Ansible, you need a machine as an Ansible control node, see the requirements in the official installation guide: (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
@@ -44,5 +46,5 @@ Once Ansible has been configured properly, it can be launched. For that purpose,
 
 ```
 $> cd <Ansible root path>
-$> ansible-playbook -u kyc_ops --private-key <path/to/private-key.pem> <playbook to be executed>
+$> ansible-playbook -u kyc_ops --private-key <path/to/SSH KEY> <playbook to be executed>
 ```
