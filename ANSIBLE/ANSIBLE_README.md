@@ -11,9 +11,12 @@ The purpose of this Ansible is to provide the installation and configuration of 
 
 This Ansible presents the following structure:
 
-1. "php.yaml" playbook to be applied.
-2. "monitoring.yaml" playbook to be applied.
-3. "inventories" with the hosts where Ansible is executed
+1. "roles" folder with roles to be applied.
+2. "ansible.cfg" with default Ansible configuration (available at parents directory).
+3. "inventories" with the hosts where Ansible is executed.
+4. "php.yaml" playbook to be applied.
+5. "monitoring.yaml" playbook to be applied.
+
 
 # 2. Environment
 
